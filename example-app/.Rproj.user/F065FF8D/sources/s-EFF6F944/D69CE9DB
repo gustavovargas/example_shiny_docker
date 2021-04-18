@@ -1,0 +1,26 @@
+{
+    "id": "D69CE9DB",
+    "path": "~/Documentos/repos/olg_shiny/app.R",
+    "project_path": "app.R",
+    "type": "r_source",
+    "hash": "1010657775",
+    "contents": "",
+    "dirty": false,
+    "created": 1615767182138.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "15,40",
+        "scrollLine": "10"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1615767212,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1615767212510,
+    "read_only": false,
+    "read_only_alternatives": []
+}
