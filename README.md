@@ -23,6 +23,10 @@ sudo docker run --name=shiny_app --rm -p 80:3838 shiny_image
 Now, if you go to [http://0.0.0.0/](http://0.0.0.0/) we can see that the app is running.
 
 
-# Running a shiny with docker in AWS
+### Running a shiny with docker in AWS
+
+Launch an instance in the cloud. I have used Ubuntu Server 20.04 LTS/64 bits (x86)/t2.micro and the next options for the security 
+
+![ rules for aws shiny app](aws_inbound_rules_shiny.png "Rules for AWS Shiny app")
 
 
