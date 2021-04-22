@@ -2,7 +2,7 @@
 
 In this repository you can find the code to run a R shiny app with docker. In the first part of this README you will find instructions to do it. In the second part you can find instructinos to run it in AWS.
 
-Any doubts or corrections, open an issue or send me a mail to ge.vargasn@gmail.com
+Any doubts or corrections, open an issue or send me an mail to ge.vargasn@gmail.com
 
 ### Running a shiny with Docker
 
@@ -58,7 +58,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 To check if all is correct, try `sudo docker run hello-world`.
 
-Now, just clone this repository and use the commands from the first part of the readme. 
+Now, just clone this repository (or the repository that you have developed) and use the commands from the first part of the readme. 
 
 ```
 git clone https://github.com/gustavovargas/example_shiny_docker.git
