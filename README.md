@@ -24,18 +24,17 @@ sudo docker run --name=shiny_app --rm -p 80:3838 shiny_image
 Now, if you go to [http://0.0.0.0/](http://0.0.0.0/) we can see that the app is running.
 
 
+
+
 ### Running a shiny with docker in AWS
 
 Launch an instance in the cloud. I have used AWS Ubuntu Server 20.04 LTS/64 bits (x86)/t2.micro and the next options for the `Edit security group`:
 
-<img src="aws_inbound_rules_shiny.png" alt="Rules for AWS Shiny app" width="400"/>
+<img src="aws_inbound_rules_shiny.png" alt="Rules for AWS Shiny app" width="600"/>
 
+Connect your terminal with the instance. In AWS the easiest way is using a pem file. You should see something like this:
 
-Connect your terminal with the instance. In AWS the easiest way is using a pem file.
-
-You should see something like this:
-
-![terminal connected to AWS](terminal_connected.png "Terminal connected to AWS")
+<img src="terminal_connected.png" alt="Terminal connected to AWS" width="600"/>
 
 You already has git installed (you can check writing `git` on the console). Now, install docker using [the commands from its web](https://docs.docker.com/engine/install/ubuntu/). Probably they will be like these:
 
