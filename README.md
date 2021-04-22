@@ -11,6 +11,7 @@ I assume you have installed [docker](https://www.docker.com/products/docker-desk
 Clone this repository in some location on your pc. Open the terminal and go to the `shiny_docker_exampple` you just cloned. With the next command you will build the image from the Dockerfile (if you are using Windows, just remove the `sudo`):
 
 ```
+# don't forget the point!
 sudo docker build -t shiny_image .
 ```
 
@@ -25,9 +26,10 @@ Now, if you go to [http://0.0.0.0/](http://0.0.0.0/) we can see that the app is 
 
 ### Running a shiny with docker in AWS
 
-Launch an instance in the cloud. I have used AWS Ubuntu Server 20.04 LTS/64 bits (x86)/t2.micro and the next options for the security:
+Launch an instance in the cloud. I have used AWS Ubuntu Server 20.04 LTS/64 bits (x86)/t2.micro and the next options for the `Edit security group`:
 
-![terminal connected to AWS](aws_inbound_rules_shiny.png "Rules for AWS Shiny app")
+<img src="aws_inbound_rules_shiny.png" alt="Rules for AWS Shiny app" width="200"/>
+
 
 Connect your terminal with the instance. In AWS the easiest way is using a pem file.
 
@@ -35,3 +37,35 @@ You should see something like this:
 
 ![terminal connected to AWS](terminal_connected.png "Terminal connected to AWS")
 
+You already has git installed (you can check writing `git` on the console). Now, install docker using [the commands from its web](https://docs.docker.com/engine/install/ubuntu/). Probably they will be like these:
+
+```
+sudo apt-get update
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+To check if all is correct, try `sudo docker run hello-world`.
+
+Now, just clone this repository and use the commands from the first part of the readme. 
+
+```
+git clone https://github.com/gustavovargas/example_shiny_docker.git
+cd example_shiny_docker
+sudo docker build -t shiny_image .
+sudo docker run --name=shiny_app --rm -p 80:3838 shiny_image
+```
+
+Just realise that your app is running in the http direction, like for example `http://3.15.188.202/`, not the https. If you want to enable the https, just follow [this instructions](https://support.rstudio.com/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy)
