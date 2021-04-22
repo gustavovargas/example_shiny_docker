@@ -33,5 +33,5 @@ Connect your terminal with the instance. In AWS the easiest way is using a pem f
 
 You should see something like this:
 
-![terminal connected to AWS](aws_inbound_rules_shiny.png "Terminal connected to AWS")
+![terminal connected to AWS](terminal_connected.png "Terminal connected to AWS")
 
