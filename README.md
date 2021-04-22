@@ -25,8 +25,13 @@ Now, if you go to [http://0.0.0.0/](http://0.0.0.0/) we can see that the app is 
 
 ### Running a shiny with docker in AWS
 
-Launch an instance in the cloud. I have used Ubuntu Server 20.04 LTS/64 bits (x86)/t2.micro and the next options for the security 
+Launch an instance in the cloud. I have used AWS Ubuntu Server 20.04 LTS/64 bits (x86)/t2.micro and the next options for the security:
 
-![ rules for aws shiny app](aws_inbound_rules_shiny.png "Rules for AWS Shiny app")
+![terminal connected to AWS](aws_inbound_rules_shiny.png "Rules for AWS Shiny app")
 
+Connect your terminal with the instance. In AWS the easiest way is using a pem file.
+
+You should see something like this:
+
+![terminal connected to AWS](aws_inbound_rules_shiny.png "Terminal connected to AWS")
 
